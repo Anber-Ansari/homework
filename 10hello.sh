@@ -1,5 +1,5 @@
-alias ls="ls -F"
-alias ll="ls -l"
-alias ..="cd .."
-alias rm="rm -i"
+echo "Hello $USER, your home is $HOME, and your shell is $SHELL"
+ls $HOME/Code/*
+ls $HOME/DATA
+
 
