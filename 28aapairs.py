@@ -7,6 +7,14 @@
 
 # Hint: if you get stuck for more than 10 minutes, get help
 
+AAcount = 0
+aminoacids = 'ACDEFGHIKLMNPQRSTVW'
+for i in range(len(aminoacids)):
+	for j in range(i + 1, len(aminoacids)):
+		print(aminoacids[i], aminoacids[j])
+	AAcount += 1
+print(AAcount)
+	
 
 """
 python3 28aapairs.py
