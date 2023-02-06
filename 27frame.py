@@ -7,6 +7,8 @@
 # Note: use 0-based indexing for position and frame (biology uses 1-based)
 
 dna = 'ATGGCCTTT'
+for i in range(len(dna)):
+	print(i, i%3, dna[i])
 
 
 """
