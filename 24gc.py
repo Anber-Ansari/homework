@@ -10,7 +10,7 @@ for i in range(len(dna)):
 	nt = dna[i]
 	if nt == 'C' or nt == 'G' : 
 		GCsum += 1
-	GCper = GCsum / len(dna)
+GCper = GCsum / len(dna)
 print(f'{GCper:.2f}')
 		
 	
