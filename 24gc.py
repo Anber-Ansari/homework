@@ -5,6 +5,17 @@
 
 dna = 'ACAGAGCCAGCAGATATACAGCAGATACTAT'
 
+GCsum = 0
+for i in range(len(dna)):
+	nt = dna[i]
+	if nt == 'C' or nt == 'G' : 
+		GCsum += 1
+	GCper = GCsum / len(dna)
+print(f'{GCper:.2f}')
+		
+	
+	
+
 
 """
 python3 24gc.py
