@@ -5,7 +5,13 @@
 # Use the same loop for both calculations
 
 # Note: you may not import math or any other library
-
+psum = 0
+n = 5
+factorial = 1
+for i in range(1, n+1):
+	psum += i
+	factorial *= i
+print(n, psum, factorial)
 
 """
 python3 22sumfac.py
