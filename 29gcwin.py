@@ -14,6 +14,14 @@
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
 
+GCsum = 0
+for i in range(len(seq) -w +1):
+	window = seq[i:i + w]
+	for nt in window:
+		if nt == 'G' or nt == 'C' :
+			GCsum += 1
+	print(i, window, f'{GCsum / len(seq):.4f}')
+
 
 """
 python3 26gcwin.py
