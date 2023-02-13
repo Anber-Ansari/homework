@@ -9,7 +9,7 @@
 
 import sys
 
-print(sys.argv) #check program
+#print(sys.argv) #check program
 
 vals = []
 valcount = 0
@@ -37,8 +37,6 @@ else:
 	median =(vals[mid//2])
 	median =(vals[mid//2-1])
 print('Median', f'{median:.3f}')
-
-
 
 
 
