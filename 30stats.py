@@ -34,7 +34,6 @@ mid = len(vals)
 if mid % 2 == 1:
 	median = vals[mid//2]
 else: 
-	median =(vals[mid//2])
 	median =(vals[mid//2-1])
 print('Median', f'{median:.3f}')
 
