@@ -22,8 +22,8 @@ for i in range(precision):
 	cal = [0] * days 
 #print(cal) check
 	for j in range(people): 
-		day = random.randint(1, days -1)
-		cal[day] += 1
+		date = random.randint(1, days -1)
+		cal[date] += 1
 		for bday in cal: 
 			if bday > 1: #more than one is a shared bday
 				found = True
