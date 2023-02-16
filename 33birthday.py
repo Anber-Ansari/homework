@@ -9,6 +9,28 @@
 
 # Variation: try making the calendar a list
 # Variation: try making the birthdays a list
+
+import random
+
+days = 365
+people = 23
+precision = 1000
+shared = 0
+
+for p in range(precision):
+	bdays = []
+	for i in range(people):
+		date = random.randint(1, days)	
+		if date in bdays:
+			shared += 1
+			break
+		else: bdays.append(date)
+print(shared/precision)
+		
+
+"""
+professor way
+
 import random
 import sys
 
@@ -31,7 +53,7 @@ for i in range(precision):
 	if found:
 		shared += 1
 print(f'{shared/precision:.3f}')
-	
+"""	
 	
 """
 python3 33birthday.py 365 23
