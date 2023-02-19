@@ -9,6 +9,101 @@
 # Variation: use 20 named variables
 # Variation: use a list
 
+#	how often each AA occurs in ecoli genome
+#	similar AA composition among genomes 
+
+
+import sys 
+import gzip
+
+A = 0
+C = 0
+D = 0
+E = 0
+F = 0
+G = 0
+H = 0
+I = 0
+K = 0
+L = 0
+M = 0
+N = 0
+P = 0
+Q = 0
+R = 0 
+S = 0
+T = 0 
+V = 0
+W = 0
+Y = 0
+
+total = 0
+
+with gzip.open(sys.argv[1], 'rt') as fp:
+	for line in fp.readlines():
+		line = line.rstrip()
+		if not line.startswith('>'):
+			total += len(line)
+			A += line.count('A')
+			C += line.count('C')
+			D += line.count('D')
+			E += line.count('E')
+			F += line.count('F')
+			G += line.count('G')
+			H += line.count('H')
+			I += line.count('I')
+			K += line.count('K')
+			L += line.count('L')
+			M += line.count('M')
+			N += line.count('N')
+			P += line.count('P')
+			Q += line.count('Q')
+			R += line.count('R')
+			S += line.count('S')
+			T += line.count('T')
+			V += line.count('V')
+			W += line.count('W')
+			Y += line.count('Y')
+print('A', A, f'{A/total:.4f}')
+print('C', C, f'{C/total:.4f}')
+print('D', D, f'{D/total:.4f}')
+print('E', E, f'{E/total:.4f}')
+print('F', F, f'{F/total:.4f}')
+print('G', G, f'{G/total:.4f}')
+print('H', H, f'{H/total:.4f}')
+print('I', I, f'{I/total:.4f}')
+print('K', K, f'{K/total:.4f}')
+print('L', L, f'{L/total:.4f}')
+print('M', M, f'{M/total:.4f}')
+print('N', N, f'{N/total:.4f}')
+print('P', P, f'{P/total:.4f}')
+print('Q', Q, f'{Q/total:.4f}')
+print('R', R, f'{R/total:.4f}')
+print('S', S, f'{S/total:.4f}')
+print('T', T, f'{T/total:.4f}')
+print('V', V, f'{V/total:.4f}')
+print('W', W, f'{W/total:.4f}')
+print('Y', Y, f'{Y/total:.4f}')
+			
+
+"""
+aas = 'ACDEFGHIKLMNPQRSTVW'
+total = 0
+caa = [0] * len(aas)
+
+with gzip.open(sys.argv[1], 'rt') as fp: #read compressed files
+	for line in fp.readlines():
+		line = line.rstrip()	#removes white space
+		if line.startswith('>'): continue
+		
+		total += len(line)
+		for i in range(len(aas)):
+			aa = aas[i]
+			caa[i] += line.count(aa)
+print(caa)
+
+"""		
+
 
 """
 python3 40aacomp.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_protein.faa.gz
