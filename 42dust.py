@@ -12,6 +12,38 @@
 
 # Note: don't worry about "centering" the entropy on the window (yet)
 
+import math 
+import mcb185
+import sys 
+
+w = int(sys.argv[2]) #second argument
+entthreshold = float(sys.argv[3]) #third argument
+
+def entropy(probs):
+	assert(math.isclose(1.0, sum(probs)))
+	h = 0
+	for p in probs:
+		if p != 0: h -= p * math.log2(p)
+	return h
+	
+def seqentropy(seq):
+	A = seq.count('A')/len(seq)
+	C = seq.count('C')/len(seq)
+	G = seq.count('G')/len(seq)
+	T = seq.count('T')/len(seq)
+	return entropy([A, C, G, T])
+	 
+
+#print(w, entthreshold)
+
+for name, seq, in mcb185.read_fasta(sys.argv[1]):
+	seqq = list(seq)
+	for i in range(len(seq) -w +1):
+		if seqentropy(seq[i:i+w]) < entthreshold: seqq[i] = 'N'
+	seq = ''.join(seqq)
+print(seq)
+
+
 
 """
 python3 42dust.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_genomic.fna.gz 11 1.4
