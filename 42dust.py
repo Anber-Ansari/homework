@@ -41,7 +41,9 @@ for name, seq, in mcb185.read_fasta(sys.argv[1]):
 	for i in range(len(seq) -w +1):
 		if seqentropy(seq[i:i+w]) < entthreshold: seqq[i] = 'N'
 	seq = ''.join(seqq)
-print(seq)
+
+for j in range(0, len(seq), 60):
+	print(seq[j:j+60])
 
 
 
