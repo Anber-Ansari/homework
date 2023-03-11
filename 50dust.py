@@ -69,7 +69,6 @@ for defline, seq in mcb185.read_fasta(arg.file):
 		
  
 	
-print(arg.file)
 
 """
 python3 50dust.py -w 11 -t 1.4 -s e.coli.fna  | head
