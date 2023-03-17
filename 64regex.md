@@ -7,7 +7,8 @@ Special characters
 - `.` matches any character 
 - `^` matches start of the string
 - `$` matches end of the string or just before newline at end of string
-- `|` to say 'or'
+- `|` to say 'or' (a|b match a or b)
+- `*` 0 or more
 - `+` greedy; keeps searching until it reaches last token (1 or more)
 - `+?` not greedy; searches to next occurence of token
 - `.+` matches all characters to end of the line
@@ -84,5 +85,12 @@ Substitutions
 - `$n` substring matched by group number n
 - `$&` copy of whole match
 - `$'` after matched string
-- `$``` before matched string
+- `$`` before matched string
 - `$+` last matched string
+
+Flags
+-----
+
+- `g` global match more than once
+- `m` forces $ and ^ to match each newline individually
+- `i` make regex case-insensitive
