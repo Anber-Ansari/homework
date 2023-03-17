@@ -84,8 +84,7 @@ Substitutions
 
 - `$n` substring matched by group number n
 - `$&` copy of whole match
-- `$'` after matched string
-- `$`` before matched string
+- `$'` after matched string (use '`' instead of ''' for before)
 - `$+` last matched string
 
 Flags
