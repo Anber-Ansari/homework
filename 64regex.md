@@ -21,23 +21,28 @@ Quantifiers
 -----------
 - `{3}` exactly 3
 - `{3,}` 3 or more
-- `{3,5}` 3,4, or 5
+- `{3,5}` 3, 4, or 5
 
 Characters
 ----------
 
+- `\A` start of string
+- `\Z` end of string
 - `\c` control character
 - `\b` word boundry
 - `\B` not work boundry
-- `\w` matches any word character
-- `\r` carriage return
 - `\n` new lines
+- `\r` carriage return
 - `\s` space characters
 - `\S` not white space
-- `\w` word character
+- `\t` tab
+- `\v` vertical tab
+- `\w` matches word character
 - `\W` not word
 - `\d` digits 0-9
 - `\D` not digit
+- `\x` hexadecimal digit
+- `\O` octal digit
 
 Lookahead and Lookbehind
 ------------------------
@@ -79,5 +84,5 @@ Substitutions
 - `$n` substring matched by group number n
 - `$&` copy of whole match
 - `$'` after matched string
-- `$`` before matched string
+- `$``` before matched string
 - `$+` last matched string
